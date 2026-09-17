@@ -1,0 +1,19 @@
+name: Java CI with Maven - test and package
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs: 
+    build:
+      runs-on: ubuntu-latest
+      
+      steps: 
+        - name: Se placer sur le premier dépôt
+          uses: actions/checkout@v4
+          uses: actions/setup-java@v4
+          with:
+            java-version: '21'
+            distribution: 'corretto'
+        - runs: mvn –B package
