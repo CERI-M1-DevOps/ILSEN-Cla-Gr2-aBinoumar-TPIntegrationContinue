@@ -12,8 +12,9 @@ jobs:
       steps: 
         - name: Se placer sur le premier dépôt
           uses: actions/checkout@v4
+        - name: Installer Java
           uses: actions/setup-java@v4
           with:
             java-version: '21'
             distribution: 'corretto'
-        - runs: mvn –B package
+        - run: mvn –B package
