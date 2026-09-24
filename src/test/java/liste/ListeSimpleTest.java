@@ -262,7 +262,7 @@ class ListeSimpleTest {
         listeATester.ajout(5);
         Noeud r1 = listeATester.tete; 
         Noeud r2 = listeATester.tete;
-        ListeATester.echanger(r1, r2);
+        listeATester.echanger(r1, r2);
         assertEquals("ListeSimple(Noeud(5))", ListeATester.ToString());
     }
 }
