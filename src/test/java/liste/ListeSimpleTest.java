@@ -63,6 +63,15 @@ class ListeSimpleTest {
         assertEquals(4, listeATester.tete.getSuivant().getElement());
     }
 
+    @Test modifierPremierElementAbsent() {
+        listeATester.ajout(1);
+        listeATester.ajout(3);
+        listeATester.ajout(5);
+        listeATester.modifiePremier(2, 4);
+        assertEquals("ListeSimple(Noeud(3), Noeud(4), Noeud(1))", listeATester.toString());
+        assertEquals(4, listeATester.tete.getSuivant().getElement());
+    }
+
     @Test
     void modifieTous() {
         listeATester.ajout(1);
