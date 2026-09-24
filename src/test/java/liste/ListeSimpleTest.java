@@ -99,13 +99,14 @@ class ListeSimpleTest {
         assertEquals("ListeSimple(Noeud(2), Noeud(1))", listeATester.toString());
         assertEquals(2, listeATester.getSize());
     }
+
     @Test
     void supprimePremierElementAbsent() {
         listeATester.ajout(1);
         listeATester.ajout(2);
         listeATester.ajout(5);
         listeATester.supprimePremier(3);
-        assertEquals("ListeSimple(Noeud(5) ,Noeud(2), Noeud(1))", listeATester.toString());
+        assertEquals("ListeSimple(Noeud(5), Noeud(2), Noeud(1))", listeATester.toString());
         assertEquals(3, listeATester.getSize());
     }
 
